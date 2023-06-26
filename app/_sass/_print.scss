@@ -1,0 +1,83 @@
+@use "normalize" as n;
+@use "mixins" as m;
+@use "responsive" as r;
+
+// Print
+@media only print {
+  @page {
+    size: A4;
+  }
+
+  body {
+    background-color: white !important;
+
+    .career {
+      background-color: white !important;
+
+      .career-container {
+        padding: 0 0.5rem 0 0 !important;
+
+        .summary__header,
+        .projects__header,
+        .experience__header {
+          h2 {
+            background-color: white !important;
+            border-bottom: 1px solid n.$light-grey;
+          }
+        }
+      }
+    }
+
+    .profile {
+      background-color: white !important;
+
+      .profile-container {
+        background-color: white !important;
+
+        .profile__info,
+        .profile__contacts,
+        .profile__education {
+          padding: 0 0 0 0.5rem !important;
+        }
+
+        .profile__info {
+          background-color: white !important;
+
+          .info__image {
+            filter: grayscale(1);
+            -webkit-filter: grayscale(1);
+          }
+          .info__name {
+            color: black !important;
+          }
+          .info__title {
+            color: n.$dark-grey;
+          }
+        }
+
+        .profile__contacts {
+          i {
+            color: n.$dark-grey !important;
+          }
+          a {
+            color: black !important;
+          }
+        }
+
+        .profile__education {
+          @include m.padding-s;
+
+          .education__title,
+          .education__speciality {
+            color: black !important;
+          }
+
+          .education__uni,
+          .education__years {
+            color: n.$dark-grey !important;
+          }
+        }
+      }
+    }
+  }
+}

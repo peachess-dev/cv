@@ -1,0 +1,165 @@
+@use "normalize" as n;
+
+// career summary__header, projects__header, experience__header
+
+@mixin header {
+  align-items: center;
+  gap: 0.5rem;
+  i {
+    padding: 0.5rem;
+    background-color: n.$dark-grey;
+    border-radius: 50%;
+  }
+}
+
+@mixin header-print {
+  align-items: center;
+  gap: 0.5rem;
+  i {
+    padding: 0.5rem;
+    background-color: none !important;
+  }
+}
+
+// career projects__case, experience__case
+
+@mixin case {
+  gap: 0.8rem;
+  .case__header__left {
+    .case__title {
+      color: n.$text-color-primary;
+    }
+    .case__company {
+      color: n.$text-color-secondary;
+    }
+  }
+  .case__header__right {
+    margin-left: auto;
+    .case__years {
+      color: n.$text-color-secondary;
+    }
+  }
+}
+
+// font sizes
+
+@mixin font-size-xs {
+  h1 {
+    font-size: 16px;
+  }
+  h2 {
+    font-size: 14px;
+  }
+  h3 {
+    font-size: 12px;
+  }
+  p {
+    font-size: 10px;
+  }
+
+  i {
+    font-size: 12px;
+  }
+
+  a {
+    font-size: 12px;
+  }
+}
+
+@mixin font-size-s {
+  h1 {
+    font-size: 18px;
+  }
+  h2 {
+    font-size: 16px;
+  }
+  h3 {
+    font-size: 14px;
+  }
+  p {
+    font-size: 12px;
+  }
+  i {
+    font-size: 12px;
+  }
+  a {
+    font-size: 12px;
+  }
+}
+
+@mixin font-size-m {
+  h1 {
+    font-size: 20px;
+  }
+  h2 {
+    font-size: 18px;
+  }
+  h3 {
+    font-size: 16px;
+  }
+  p {
+    font-size: 14px;
+  }
+  i {
+    font-size: 14px;
+  }
+  a {
+    font-size: 14px;
+  }
+}
+
+@mixin font-size-l {
+  h1 {
+    font-size: 22px;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  h3 {
+    font-size: 18px;
+  }
+  p {
+    font-size: 16px;
+  }
+  i {
+    font-size: 16px;
+  }
+  a {
+    font-size: 16px;
+  }
+}
+
+// gap between elements
+
+@mixin gap-xs {
+  gap: 0.5rem;
+}
+
+@mixin gap-s {
+  gap: 1rem;
+}
+
+@mixin gap-m {
+  gap: 1.5rem;
+}
+
+@mixin gap-l {
+  gap: 2rem;
+}
+
+@mixin gap-xl {
+  gap: 4rem;
+}
+
+// paddings
+@mixin padding-s {
+  padding: 0.5rem;
+}
+
+@mixin padding-m {
+  padding: 1.5rem;
+}
+
+@mixin padding-l {
+  padding: 3.5rem;
+}

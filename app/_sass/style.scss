@@ -1,0 +1,121 @@
+@use "normalize" as n;
+@use "mixins" as m;
+
+@import "normalize";
+@import "responsive";
+@import "print";
+
+// BODY
+body {
+  background-color: n.$light-grey;
+}
+
+// CAREER SECTION
+
+.career {
+  background-color: n.$smoky-white;
+
+  .career-container {
+    @include m.padding-l;
+    @include m.gap-xl;
+  }
+
+  .career__summary,
+  .career__projects,
+  .career__experience {
+    @include m.gap-l;
+  }
+
+  .summary__header,
+  .projects__header,
+  .experience__header {
+    @include m.header;
+    h2 {
+      background-color: n.$light-grey;
+      flex-grow: 1;
+    }
+  }
+
+  .projects__case,
+  .experience__case {
+    @include m.case;
+
+    .case__content {
+      gap: 0.3rem;
+      span {
+        font-style: italic;
+      }
+    }
+  }
+}
+
+// PROFILE SECTION
+
+.profile {
+  background-color: n.$theme-color-primary;
+
+  .profile-container {
+    .profile__info,
+    .profile__contacts,
+    .profile__education {
+      @include m.padding-m;
+
+      .contacts__phone,
+      .contacts__linkedin,
+      .contacts__email,
+      .contacts__github {
+        flex-shrink: 0;
+      }
+    }
+  }
+}
+
+// profile info
+
+.profile__info {
+  background-color: n.$theme-color-secondary;
+  @include m.gap-xs;
+  align-items: center;
+
+  .info__image {
+    width: 50%;
+
+    img {
+      width: 100%;
+      border-radius: 50%;
+    }
+  }
+
+  .info__name {
+    color: n.$smoky-white;
+  }
+
+  .info__title {
+    color: n.$dark-grey;
+  }
+}
+
+// profile contacts
+
+.profile__contacts {
+  @include m.gap-s;
+
+  i {
+    margin-right: 0.5rem;
+  }
+}
+
+// profile education
+.profile__education {
+  @include m.gap-l;
+
+  .education__title,
+  .education__speciality {
+    color: n.$smoky-white;
+  }
+
+  .education__uni,
+  .education__years {
+    color: n.$light-grey;
+  }
+}

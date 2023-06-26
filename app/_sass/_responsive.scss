@@ -1,0 +1,121 @@
+@use "normalize" as n;
+@use "mixins" as m;
+
+// Extra large devices (large laptops and desktops, 1200px and up)
+@media only screen and (min-width: 1200px) {
+  @include m.font-size-l;
+}
+
+// Large devices (laptops/desktops, 992px and up)
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  @include m.font-size-m;
+
+  .career {
+    .career-container {
+      @include m.gap-l;
+    }
+
+    .career__summary,
+    .career__projects,
+    .career__experience {
+      @include m.gap-m;
+    }
+  }
+}
+
+// Medium devices (landscape tablets, 768px and up)
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  @include m.font-size-s;
+}
+
+// Small devices (portrait tablets and large phones, 600px and up)
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+  @include m.font-size-s;
+  .profile {
+    .profile-container {
+      .profile__info,
+      .profile__contacts {
+        @include m.padding-s;
+        @include m.gap-xs;
+
+        i {
+          display: none;
+        }
+      }
+
+      .profile__education {
+        @include m.padding-s;
+        @include m.gap-s;
+      }
+    }
+  }
+
+  .career {
+    .career-container {
+      @include m.padding-m;
+
+      .career__summary,
+      .career__projects,
+      .career__experience {
+        @include m.gap-s;
+      }
+    }
+  }
+}
+
+// Extra small devices (phones, 600px and down)
+@media only screen and (max-width: 599px) {
+  @include m.font-size-xs;
+
+  .outer-container {
+    flex-direction: column;
+  }
+
+  .profile {
+    order: 1;
+
+    .profile-container {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 1rem;
+
+      .profile__info,
+      .profile__contacts,
+      .profile__education {
+        @include m.gap-xs;
+      }
+
+      .profile__info {
+        gap: 0;
+        grid-column: 1/3;
+        grid-row: 1/3;
+      }
+
+      .profile__contacts {
+        padding-bottom: 0;
+        grid-column: 3/6;
+        grid-row: 1/2;
+      }
+
+      .profile__education {
+        padding-top: 1rem;
+        grid-column: 3/6;
+        grid-row: 2/3;
+      }
+    }
+  }
+
+  .career {
+    order: 2;
+
+    .career-container {
+      @include m.padding-m;
+
+      .career__summary,
+      .career__projects,
+      .career__experience {
+        @include m.gap-xs;
+      }
+    }
+  }
+}

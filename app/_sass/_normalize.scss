@@ -1,0 +1,80 @@
+$theme-color-primary: #4b6a78;
+$theme-color-secondary: #3d5561;
+$text-color-primary: #283a55;
+$text-color-secondary: #61728a;
+$light-grey: #ccc;
+$dark-grey: #888888;
+$smoky-white: #f5f5f5;
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+body * {
+  margin: 0;
+}
+
+.outer-container {
+  max-width: 1200px;
+  min-height: 100vh;
+  margin: 0 auto;
+}
+
+.inner-container {
+  margin: 0 auto;
+  gap: 3rem;
+}
+
+.career-container {
+  margin: 0 auto;
+  gap: 3rem;
+}
+
+.profile-container {
+  margin: 0 auto;
+  gap: 1.5rem;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: 1.5rem;
+  line-height: 140%;
+}
+
+h2 {
+  font-size: 1.375rem;
+  line-height: 140%;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: 1.25rem;
+  line-height: 135%;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 130%;
+  text-align: justify;
+}
+
+a {
+  text-decoration: none;
+  color: $light-grey;
+}
+
+i {
+  color: $light-grey;
+}
