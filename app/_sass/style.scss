@@ -36,6 +36,10 @@ body {
     }
   }
 
+  .summary__content {
+    gap: 0.3rem;
+  }
+
   .projects__case,
   .experience__case {
     @include m.case;

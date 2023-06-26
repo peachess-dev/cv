@@ -643,7 +643,7 @@ i {
     background-color: white !important;
   }
   body .career .career-container {
-    padding: 0 0.5rem 0 0 !important;
+    padding: 2.5rem 0.5rem 0 0 !important;
   }
   body .career .career-container .summary__header h2,
   body .career .career-container .projects__header h2,
@@ -727,6 +727,9 @@ body {
 .career .experience__header h2 {
   background-color: #ccc;
   flex-grow: 1;
+}
+.career .summary__content {
+  gap: 0.3rem;
 }
 .career .projects__case,
 .career .experience__case {
